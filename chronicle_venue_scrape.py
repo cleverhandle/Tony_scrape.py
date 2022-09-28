@@ -45,4 +45,4 @@ def check_venues(first_number, last_number):
 
 
 prep_output_file('C:\\Users\\12544\\Documents\\Unknown locations.csv')
-check_venues(533654, 540000)
+check_venues(552969, 555000)

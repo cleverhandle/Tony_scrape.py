@@ -127,7 +127,7 @@ def clean_location(location):
         if word == location:
             location = "Auditorium Shores"
     stubbs_list = ["Stubb's Bar-B-Q", "Stubbs Waller Creek Amphitheater", "Stubb's Waller Creek Amphitheater",
-                   "Stubb's Barbeque", "Stubb's BBQ"]
+                   "Stubb's Barbeque", "Stubb's BBQ", "Stubb's Indoors"]
     for word in stubbs_list:
         if word == location:
             location = "Stubb's"
