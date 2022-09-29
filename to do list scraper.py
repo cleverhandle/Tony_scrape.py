@@ -118,7 +118,7 @@ def clean_location(location):
     for word in native_list:
         if word == location:
             location = "Native Bar & Cafe"
-    volstead_list = ['Hotel Vegas', "Volstead Lounge", "HOTEL VEGAS"]
+    volstead_list = ['Hotel Vegas', "Volstead Lounge", "HOTEL VEGAS", "The Volstead Lounge"]
     for word in volstead_list:
         if word == location:
             location = "Hotel Vegas & The Volstead Lounge"
@@ -341,6 +341,8 @@ def clean_location(location):
         location = "Parish"
     elif location == "Kick Butt Coffee Music & Booze":
         location = "Kick Butt Coffee"
+    elif location == "Kick Butt Café":
+        location = "Kick Butt Coffee"
     elif location == "Sterling Event Center":
         location = "Sterling Events Center"
     elif location == "Cloud Tree Studios":
@@ -393,6 +395,12 @@ def clean_location(location):
         location = "The LINE Hotel Austin"
     elif location == "LifeAustin Amphitheater":
         location = "LifeAustin Amphitheatre"
+    elif location == "Banger's Sausage House And Beer Garden":
+        location = "Banger's Sausage House & Beer Garden"
+    elif location == "The Skylark Lounge":
+        location = "Skylark Lounge"
+    elif location == "Revelry On The Boulevard":
+        location = "Revelry on the Boulevard"
     return(location)
 
 
@@ -622,7 +630,7 @@ def scrape_eventbrite(list_of_dates, output_file):
                          'Bandera', 'Bankersmith', 'Dallas', 'Schulenburg', 'McDade', 'Boerne', 'Leander',
                          'Spring Branch', 'College Station', 'Harper', 'Selma', 'Salado', 'Cibolo', 'Converse',
                          'Floresville', 'Bulverde', 'Belton', 'Gatesville', 'Bastrop', 'Driftwood', 'Harker Heights',
-                         'Allentown', 'Columbus', 'Lubbock']
+                         'Allentown', 'Columbus', 'Lubbock', 'Caldwell']
         for category in category_list:
             try:
                 new_url = 'https://www.eventbrite.com/d/tx--austin/' + category + '--events/?end_date=' + date[
@@ -713,7 +721,8 @@ def scrape_ticketmaster(list_of_dates, output_file):
                     san_antonio_location = ['221 Burleson Street', 'Laugh Out Loud Comedy Club', 'AT&T Center',
                                             'Alamodome', 'Majestic Theatre San Antonio', 'Aztec Theatre ',
                                             'Toyota Field', 'Freeman Coliseum', 'Alamodome Theater', 'Jo Long Theatre',
-                                            'Charline McCombs Empire Theatre', 'Lila Cockrell Theatre']
+                                            'Charline McCombs Empire Theatre', 'Lila Cockrell Theatre',
+                                            'Tobin Center for the Performing Arts']
                     for word in san_antonio_location:
                         if location == word:
                             location = 'Delete'
